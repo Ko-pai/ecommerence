@@ -1,0 +1,1089 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+
+    &::-webkit-scrollbar{
+        display: none;
+
+    }
+
+
+    .container{
+        width: 80vw;
+        height: 100vh;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            border-bottom: 0.2px solid hsl(220, 14%, 75%);
+            font-family: 'Kumbh Sans', sans-serif;
+            cursor: pointer;
+            user-select: none;
+
+            .inner-header-container{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: start;
+                
+
+                .startDiv{
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 80px;
+                    
+
+                    .humburgerContainer{
+                        display: none;
+                    }
+
+                    h1{
+
+                        font-size: 35px;
+                        letter-spacing: -1px;
+                        font-weight: 800;
+                        
+                    }
+                }
+
+                
+                .middleDiv{
+                    height: 90px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 50px;
+                    position: relative;
+
+
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+
+                        li{
+                            margin-right: 20px;
+                            list-style: none;
+                            color: hsla(223, 10%, 65%, 0.781);
+                            font-weight: 500;
+                            cursor: pointer;
+                            
+
+                            &:active{
+                                color: black;
+                            }
+                        }
+                    }
+
+                    .slider{
+
+                        width: 80px;
+                        height: 4px;
+                        background: hsl(26, 100%, 55%);
+                        align-self: flex-start;
+                        position: absolute;
+                        bottom: 0;
+                        transition: all 0.5s ease;
+
+                    }
+                }
+
+
+                .endDiv{
+                    width: 220px;
+                    height: 90px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin-left: 500px;
+                    position: relative;
+
+                    .billContainer{
+                        width: 340px;
+                        height: 240px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        background-color: white;
+                        position: absolute;
+                        top: 75px;
+                        right: 1px;
+                        border: none;
+                        transform: scale(0);
+                        border-radius: 8px;
+                        transition: all 0.5s ease;
+                        box-shadow: 0px 14px 30px  hsla(240, 1%, 17%, 0.329);
+
+
+                        .firstDivInBill{
+                            width: 95%;
+                            height: 60px;
+                            border-bottom: 0.5px solid hsla(220, 14%, 75%, 0.562);
+                            display: flex;
+                            align-items: center;
+                            padding-left: 20px;
+                        }
+
+                        .secondDivInBill{
+
+                            width: 100%;
+                            height: calc(100% - 60px);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: hsl(219, 7%, 61%);
+                            font-weight: 700;
+                            
+                            .inCartItemContainer{
+                                width: 90%;
+                                height: 80%;
+                                display: flex;
+                                flex-direction: column;
+                                
+                                .checkoutButton{
+
+                                    transition: all 0.5s ease;
+                                
+                                &:active{
+                                    opacity: 0.7;
+                                    transform: scale(1.1);
+                                }
+                                }
+
+                                .itemAndAmountContainer{
+                                    width: 100%;
+                                    height:calc(100% - 50px);
+                                    transform: scale(0);
+                                    display: flex;
+                                    transition: all 0.5s ease;
+                                    justify-content: center;
+
+                                    .billImageContainer{
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 8px;
+
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: inherit;
+                                        }
+                                    }
+
+                                    .billText{
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 250px;
+                                        height: 60px;
+                                        font-family: 'Kumbh Sans', sans-serif;
+                                        justify-content: center;
+                                        padding-left: 20px;
+
+
+                                        .shoesEditionText{
+                                            margin: 0;
+                                            font-weight: 500;
+                                            color: hsla(216, 5%, 39%, 0.774);
+                                            font-size: 15px;
+                                        }
+
+
+                                        .bottomDivOfBillText{
+                                            display: flex;
+                                            width: 200px;
+                                            height: 30px;
+
+                                            .text1InBill{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                font-weight: 500;
+                                                color: hsla(216, 5%, 39%, 0.774);
+                                                font-size: 15px;
+
+                                            }
+
+                                            .text2InBill{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                font-weight: 800;
+                                                color: hsla(240, 4%, 5%, 0.973);
+                                                letter-spacing: 0.5px;
+                                                font-size: 15px;
+                                            }
+                                        }
+                                        
+                                    }
+
+                                    .deleteIconContainer{
+                                        height: 55%;
+                                        display: flex;
+                                        align-items: center;
+                                    }
+
+
+
+
+                                }
+
+                                button{
+                                    height: 50px;
+                                    border-radius: 10px;
+                                    border: none;
+                                    background-color: hsl(26, 100%, 55%);
+                                    color: white;
+                                    font-size: 15px;
+                                    letter-spacing: 0.5px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+
+                    .shoppingIcon{
+                        
+
+                        img{
+                            width: 28px;
+                            height: 28px;
+                        }
+                        .addToCartAmount{
+                            margin: 0;
+                            width: 25px;
+                            height: 15px;
+                            border-radius: 10px;
+                            background-color: hsl(26, 100%, 55%);
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                            position: absolute;
+                            top: 23px;
+                            left: 45px;
+                            font-weight: 700;
+                            opacity: 0;
+                            transition: all 0.5s ease;
+                        }
+                    }
+
+                    .borderColor{
+                        border-radius: 50%;
+                        border: 2px solid hsl(26, 100%, 55%);
+                    }
+
+                    .avatarIcon{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+
+                        img{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        main{
+            width: 100%;
+            height: 100%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .inner-main{
+                width: 90%;
+                height: 90%;
+               
+                display: flex;
+                
+
+                .left{
+                    width: 500px;
+                    height: 100%;
+                    
+                    display: flex;
+                    
+                    
+                    .lightBox{
+                        position: absolute;
+                        width: 100vw;
+                        height: 100vh;
+                        background: hsla(0, 0%, 0%,75%);
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transform: scale(0);
+                        transition: all 0.5s ease;
+                        user-select: none;
+
+                        .inner-lightBox{
+                            width: 40%;
+                            height: 80%;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+
+                            .crossIconContainer{
+                                width: 72%;
+                                height: 50px;
+                                display: flex;
+                                justify-content: end;
+                                align-items: center;
+
+                                .cross{
+                                    font-size: 30px;
+                                    transform: all 0.4s ease;
+                                    color: white;
+                                    font-weight: 700;
+
+                                    &:active{
+                                        color: hsl(26, 100%, 55%);
+                                        transform: scale(1.2);
+                                    }
+                                }
+                            }
+
+                            .lightBoxImageContainer{
+                                width: 90%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                transition: all 1s ease;
+
+                                .bigItem{
+                                    width: 80%;
+                                    height: 70%;
+                                    border-radius: 10px;
+                                    position: relative;
+
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        border-radius: inherit;
+                                    }
+
+                                    .next-previous-container{
+                                        width: 100%;
+                                        top: 45%;
+                                        position: absolute;
+                                        display: flex;
+                                        justify-content: space-between;
+
+                                        .previousIconContainer,.nextIconContainer{
+                                            width: 40px;
+                                            height: 40px;
+                                            border-radius: 50%;
+                                            background-color: white;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            transition: all 0.2s ease;
+                                            
+
+                                            &:active{
+                                                transform: scale(1.2);
+                                                color: hsl(26, 100%, 55%);
+                                            }
+                                            
+                                            
+                                        }
+
+                                        .previousIconContainer{
+                                            margin-left: -19px;
+
+                                            .angleLeft{
+                                                font-size: 20px;
+                                            }
+                                        }
+
+                                        .nextIconContainer{
+                                            margin-right: -18px;
+
+                                            .angleRight{
+                                                font-size: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .smallItem{
+                                    width: 80%;
+                                    height: 20%;
+                                    
+                                    display: flex;
+                                    align-items: center;
+                                    
+
+                                    .inner-small-item{
+                                        width: 80%;
+                                        height: 80%;                                      
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        
+                                        .active{
+                                            border: 3px solid hsl(26, 100%, 55%);
+                                        }
+
+                                        .imgActive{
+                                            opacity: 0.6;
+                                        }
+
+                                        li{
+                                            list-style: none;
+                                            width: 70px;
+                                            height: 70px;
+                                            border-radius: 8px;
+                                            background: white;
+                                            transition: all 0.2s ease;
+
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 5px;
+                                                transition: all 0.2s ease;
+                                            }
+                                        }
+                                        /*
+                                        .product2-small-item{
+                                            width: 70px;
+                                            height: 70px;
+                                            border-radius: 8px;
+
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 5px;
+                                            }
+                                        }
+                                        .product3-small-item{
+                                            width: 70px;
+                                            height: 70px;
+                                            border-radius: 8px;
+
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 5px;
+                                            }
+                                        }
+                                        .product4-small-item{
+                                            width: 70px;
+                                            height: 70px;
+                                            border-radius: 8px;
+
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: 5px;
+                                            }
+                                        }
+                                        */
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .inner-left{
+                        width: 90%;
+                        height: 100%;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        
+                        .leftAndRightContainer{
+                            display: none;
+                        }
+
+                        .active{
+                            border: 2px solid hsl(26, 100%, 55%);
+                        }
+
+                        .imgActive{
+                            opacity: 0.6;
+                        }
+
+
+                        .bigImageContainer{
+                            width: 90%;
+                            height: 70%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px;
+                            
+                            img{
+                                width: 100%;
+                                height: 90%;
+                                border-radius: inherit;
+                            }
+                        }
+
+                        .small-image-container{
+                            width: 90%;
+                            height: 100px;
+                            padding: 5px;
+                           
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            li{
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 8px;
+                                list-style: none;
+                                background-color: white;
+
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 5px;
+
+                                    &:active{
+                                        opacity: 0.6;
+                                    }
+                                    
+                                }
+
+                            }
+
+                            /*
+                            .product2-small-image{
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 8px;
+                                &:active{
+                                    border: 2px solid hsl(26, 100%, 55%);
+                                    
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 5px;
+                                    &:active{
+                                        opacity: 0.6;
+                                    }
+                                }
+                            }
+                            .product3-small-image{
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 8px;
+                                &:active{
+                                    border: 2px solid hsl(26, 100%, 55%);
+                                    
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 5px;
+                                    &:active{
+                                        opacity: 0.6;
+                                    }
+                                }
+                            }
+                            .product4-small-image{
+                                width: 70px;
+                                height: 70px;
+                                border-radius: 8px;
+                                &:active{
+                                    border: 2px solid hsl(26, 100%, 55%);
+                                    
+                                }
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 5px;
+                                    &:active{
+                                        opacity: 0.6;
+                                    }
+                                }
+                            }
+
+                            */
+                        }
+                    }
+                }
+
+                .right{
+                    width: 700px;
+                    height: 100%;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Kumbh Sans', sans-serif;
+
+                    .inner-right{
+                        height: 70%;
+                        width: 100%;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .firstDiv{
+                            width: 90%;
+                            height: 130px;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+
+                            span{
+                                color: hsl(26, 100%, 55%);
+                                letter-spacing: 2px;
+                                font-size: 14px;
+                                font-weight: 700;
+                                margin-bottom: 10px;
+                            }
+
+                            p{
+                                
+                                font-size: 40px;
+                                font-weight: 700;
+                                padding: 0;
+                                margin: 0;
+                                width: 80%;
+                                letter-spacing: 1px;
+                            }
+                        }
+
+                        .secondDiv{
+                            width: 90%;
+                            height: 250px;
+                            
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            .recommend-text{
+                                width: 80%;
+
+                                p{
+                                    line-height: 23px;
+                                    font-size: 16px;
+                                    color: hsl(217, 5%, 51%);
+                                    letter-spacing: 0.4px;
+                                }
+                            }
+
+                            .amount-container{
+                                width: 40%;
+                                height: 100px;
+                                
+
+                                .priceDiv{
+                                    display: flex;
+                                    width: 65%;
+                                    height: 40px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+
+                                    span{
+                                        font-size: 25px;
+                                        font-weight: 700;
+                                        letter-spacing: 0.5px;
+                                    }
+                                    
+                                    p{
+                                        margin: 0;
+                                        height: 20px;
+                                        width: 35px;
+                                        padding: 5px;
+                                        text-align: center;
+                                        background-color: hsla(25, 81%, 85%, 0.664);
+                                        color: hsl(26, 88%, 53%);
+                                        font-size: 15px;
+                                        font-weight: 800;
+                                        border-radius: 5px;
+                                    }
+                                }
+
+                                .discountDiv{
+                                    width: 10%;
+                                    height: 30px;
+                                    display: flex;
+                                    align-items: center;
+
+                                    p{
+                                        font-size: 14px;
+                                        color:  hsl(216, 9%, 67%);
+                                        letter-spacing: 0.5px;
+                                        text-decoration: line-through;
+                                    }
+                                }
+                            }
+                        }
+
+
+                        .lastDiv{
+                            width: 90%;
+                            height: 200px;
+                            user-select: none;
+                            display: flex;
+
+                            
+                            .count-container{
+                                width: 150px;
+                                height: 50px;
+                                background: hsla(219, 15%, 77%, 0.288);
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                border-radius: 8px;
+                                transition:all 0.4s ease;
+
+                                &:active{
+                                   
+                                   box-shadow: 0px 0px 20px rgba(70, 67, 67, 0.301);
+
+                                }
+
+
+                                .minus{
+
+                                    &:active{
+                                        opacity: 0.5;
+                                    }
+                                }
+                                .plus{
+
+                                    &:active{
+                                        opacity: 0.5;
+                                    }
+                                }
+                            }
+
+                            .addToCartButton{
+                                width: 300px;
+                                height: 50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: hsl(26, 94%, 53%);
+                                color: white;
+                                border-radius: 10px;
+                                box-shadow: 0px 5px 20px 2px hsla(26, 100%, 55%, 0.616);
+                                margin-left: 20px;
+                                user-select: none;
+                                transition: all 0.5s ease;
+                                
+                                &:active{
+                                    opacity: 0.7;
+                                    transform: scale(1.1);
+                                }
+                                p{
+                                    margin-left: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width : 560px){
+    body{
+        
+        .container{
+            width: 100%;
+
+
+            header{
+
+
+                .inner-header-container{
+                    justify-content: space-between;
+                    height: 90%;
+                    
+                    .startDiv{
+                        width: 255px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .humburgerContainer{
+                            display: flex;
+                            width: 50px;
+                            height: 70px;
+                            align-items: center;
+                            margin-top: 10px;
+
+                            img{
+                                width: 27px;
+                                height: 27px;
+                            }
+                            
+                        }
+                        h1{
+                            
+                            font-size: 38px;
+                            font-weight: 700;
+                            letter-spacing: -2px;
+                        }
+
+                    }
+                    
+                    .middleDiv{
+                        display: none;
+                    }
+
+                    .endDiv{
+                        width: 120px;
+                        margin-left: 0px;
+
+                        .billContainer{
+                            z-index: 1;
+                            width: 370px;
+                            height: 310px;
+                            top: 100px;
+                            right: 65px;
+                        }
+
+                        .shoppingIcon{
+
+                            .addToCartAmount{
+                                left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+            main{
+
+                .inner-main{
+                    width: 100%;
+                    height: 100%;
+                    flex-direction: column;
+
+
+                    
+
+                        .left{
+                            width: 100%;
+    
+                            
+                            .inner-left{
+                                width: 100%;
+                                align-items: center;
+                                position: relative;
+
+                                .leftAndRightContainer{
+                                    display: flex;
+                                    width: 100%;
+                                    height: 60px;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    position: absolute;
+                                    
+                                    top: 35%;
+
+                                    .leftArrowDiv,.rightArrowDiv{
+                                        width: 40px;
+                                        height: 40px;
+                                        border-radius: 50%;
+                                        background-color: white;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        transition: all 0.2s ease;
+
+                                        &:active{
+                                            transform: scale(1.2);
+                                            color: hsl(26, 100%, 55%);
+                                        }
+
+                                    }
+
+                                    .leftArrowDiv{
+                                        margin-left: 20px;
+
+                                        .arrowLeft{
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+                                    }
+                                    .rightArrowDiv{
+                                        margin-right: 20px;
+
+                                        .arrowRight{
+                                            width: 20px;
+                                            height: 20px;
+                                        }
+                                    }
+                                }
+                                .bigImageContainer{
+                                    width: 100%;
+                                    height: 100%;
+                                    align-items: start;
+                                   
+                                    border-radius: unset;
+                                }
+
+
+                                .small-image-container{
+                                    display: none;
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+
+                        .right{
+                            align-items: start;
+                            width: 100%;
+
+
+                            .inner-right{
+                                height: 90%;
+
+                                .firstDiv{
+
+
+                                    p{
+                                        width: 100%;
+                                        font-size: 38px;
+                                    }
+                                }
+
+
+                                .secondDiv{
+                                   
+
+                                    .recommend-text{
+                                        width: 90%;
+                                    }
+
+                                    .amount-container{
+                                        width: 80%;
+                                        height: 80px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+
+                                        .priceDiv{
+                                            width: 50%;
+                                            justify-content: unset;
+
+                                            p{
+                                                margin-left: 30px;
+                                            }
+
+                                        }
+                                    }
+
+                                }
+
+
+                                .lastDiv{
+                                    flex-direction: column;
+                                    justify-content: space-around;
+                                    align-self: flex-start;
+                                    align-items: center;
+                                    margin-left: 20px;
+                                    width: 90%;
+                                    height: 200px;
+                                    
+
+
+                                    .count-container{
+                                        width: 100%;
+                                        
+                                    }
+
+                                    .addToCartButton{
+                                        width: 100%;
+                                        margin: 0;
+                                    }
+
+                                }
+                            }
+                        }
+                    
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (max-width : 420px){
+    body{
+
+        .container{
+
+            header{
+
+                .inner-header-container{
+
+                    .endDiv{
+                        .billContainer{
+                            right: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width : 390px){
+    body{
+
+        .container{
+
+            header{
+
+                .inner-header-container{
+
+                    .endDiv{
+
+                        .billContainer{
+                            right: 15px;
+                            width: 350px;
+                            height: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

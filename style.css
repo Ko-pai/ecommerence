@@ -1,0 +1,833 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body .container {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container header {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  border-bottom: 0.2px solid hsl(220, 14%, 75%);
+  font-family: "Kumbh Sans", sans-serif;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .container header .inner-header-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+}
+body .container header .inner-header-container .startDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+body .container header .inner-header-container .startDiv .humburgerContainer {
+  display: none;
+}
+body .container header .inner-header-container .startDiv h1 {
+  font-size: 35px;
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+body .container header .inner-header-container .middleDiv {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  position: relative;
+}
+body .container header .inner-header-container .middleDiv ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+body .container header .inner-header-container .middleDiv ul li {
+  margin-right: 20px;
+  list-style: none;
+  color: hsla(223, 10%, 65%, 0.781);
+  font-weight: 500;
+  cursor: pointer;
+}
+body .container header .inner-header-container .middleDiv ul li:active {
+  color: black;
+}
+body .container header .inner-header-container .middleDiv .slider {
+  width: 80px;
+  height: 4px;
+  background: hsl(26, 100%, 55%);
+  align-self: flex-start;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+body .container header .inner-header-container .endDiv {
+  width: 220px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 500px;
+  position: relative;
+}
+body .container header .inner-header-container .endDiv .billContainer {
+  width: 340px;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 75px;
+  right: 1px;
+  border: none;
+  transform: scale(0);
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  box-shadow: 0px 14px 30px hsla(240, 1%, 17%, 0.329);
+}
+body .container header .inner-header-container .endDiv .billContainer .firstDivInBill {
+  width: 95%;
+  height: 60px;
+  border-bottom: 0.5px solid hsla(220, 14%, 75%, 0.562);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill {
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(219, 7%, 61%);
+  font-weight: 700;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .checkoutButton {
+  transition: all 0.5s ease;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .checkoutButton:active {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer {
+  width: 100%;
+  height: calc(100% - 50px);
+  transform: scale(0);
+  display: flex;
+  transition: all 0.5s ease;
+  justify-content: center;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billImageContainer {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billImageContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 60px;
+  font-family: "Kumbh Sans", sans-serif;
+  justify-content: center;
+  padding-left: 20px;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .shoesEditionText {
+  margin: 0;
+  font-weight: 500;
+  color: hsla(216, 5%, 39%, 0.774);
+  font-size: 15px;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText {
+  display: flex;
+  width: 200px;
+  height: 30px;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText .text1InBill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: hsla(216, 5%, 39%, 0.774);
+  font-size: 15px;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText .text2InBill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: hsla(240, 4%, 5%, 0.973);
+  letter-spacing: 0.5px;
+  font-size: 15px;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .deleteIconContainer {
+  height: 55%;
+  display: flex;
+  align-items: center;
+}
+body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer button {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+body .container header .inner-header-container .endDiv .shoppingIcon img {
+  width: 28px;
+  height: 28px;
+}
+body .container header .inner-header-container .endDiv .shoppingIcon .addToCartAmount {
+  margin: 0;
+  width: 25px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  position: absolute;
+  top: 23px;
+  left: 45px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+body .container header .inner-header-container .endDiv .borderColor {
+  border-radius: 50%;
+  border: 2px solid hsl(26, 100%, 55%);
+}
+body .container header .inner-header-container .endDiv .avatarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container header .inner-header-container .endDiv .avatarIcon img {
+  width: 50px;
+  height: 50px;
+}
+body .container main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container main .inner-main {
+  width: 90%;
+  height: 90%;
+  display: flex;
+}
+body .container main .inner-main .left {
+  width: 500px;
+  height: 100%;
+  display: flex;
+}
+body .container main .inner-main .left .lightBox {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: hsla(0, 0%, 0%, 0.75);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .crossIconContainer {
+  width: 72%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .crossIconContainer .cross {
+  font-size: 30px;
+  transform: all 0.4s ease;
+  color: white;
+  font-weight: 700;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .crossIconContainer .cross:active {
+  color: hsl(26, 100%, 55%);
+  transform: scale(1.2);
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s ease;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem {
+  width: 80%;
+  height: 70%;
+  border-radius: 10px;
+  position: relative;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container {
+  width: 100%;
+  top: 45%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .previousIconContainer, body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .nextIconContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .previousIconContainer:active, body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .nextIconContainer:active {
+  transform: scale(1.2);
+  color: hsl(26, 100%, 55%);
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .previousIconContainer {
+  margin-left: -19px;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .previousIconContainer .angleLeft {
+  font-size: 20px;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .nextIconContainer {
+  margin-right: -18px;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .bigItem .next-previous-container .nextIconContainer .angleRight {
+  font-size: 20px;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .smallItem {
+  width: 80%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .smallItem .inner-small-item {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*
+  .product2-small-item{
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+
+      img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+      }
+  }
+  .product3-small-item{
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+
+      img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+      }
+  }
+  .product4-small-item{
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+
+      img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+      }
+  }
+  */
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .smallItem .inner-small-item .active {
+  border: 3px solid hsl(26, 100%, 55%);
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .smallItem .inner-small-item .imgActive {
+  opacity: 0.6;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .smallItem .inner-small-item li {
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.2s ease;
+}
+body .container main .inner-main .left .lightBox .inner-lightBox .lightBoxImageContainer .smallItem .inner-small-item li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+body .container main .inner-main .left .inner-left {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body .container main .inner-main .left .inner-left .leftAndRightContainer {
+  display: none;
+}
+body .container main .inner-main .left .inner-left .active {
+  border: 2px solid hsl(26, 100%, 55%);
+}
+body .container main .inner-main .left .inner-left .imgActive {
+  opacity: 0.6;
+}
+body .container main .inner-main .left .inner-left .bigImageContainer {
+  width: 90%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+body .container main .inner-main .left .inner-left .bigImageContainer img {
+  width: 100%;
+  height: 90%;
+  border-radius: inherit;
+}
+body .container main .inner-main .left .inner-left .small-image-container {
+  width: 90%;
+  height: 100px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*
+  .product2-small-image{
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      &:active{
+          border: 2px solid hsl(26, 100%, 55%);
+
+      }
+      img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          &:active{
+              opacity: 0.6;
+          }
+      }
+  }
+  .product3-small-image{
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      &:active{
+          border: 2px solid hsl(26, 100%, 55%);
+
+      }
+      img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          &:active{
+              opacity: 0.6;
+          }
+      }
+  }
+  .product4-small-image{
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      &:active{
+          border: 2px solid hsl(26, 100%, 55%);
+
+      }
+      img{
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          &:active{
+              opacity: 0.6;
+          }
+      }
+  }
+
+  */
+}
+body .container main .inner-main .left .inner-left .small-image-container li {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  list-style: none;
+  background-color: white;
+}
+body .container main .inner-main .left .inner-left .small-image-container li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+body .container main .inner-main .left .inner-left .small-image-container li img:active {
+  opacity: 0.6;
+}
+body .container main .inner-main .right {
+  width: 700px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+body .container main .inner-main .right .inner-right {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .container main .inner-main .right .inner-right .firstDiv {
+  width: 90%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .container main .inner-main .right .inner-right .firstDiv span {
+  color: hsl(26, 100%, 55%);
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+body .container main .inner-main .right .inner-right .firstDiv p {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  letter-spacing: 1px;
+}
+body .container main .inner-main .right .inner-right .secondDiv {
+  width: 90%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .container main .inner-main .right .inner-right .secondDiv .recommend-text {
+  width: 80%;
+}
+body .container main .inner-main .right .inner-right .secondDiv .recommend-text p {
+  line-height: 23px;
+  font-size: 16px;
+  color: hsl(217, 5%, 51%);
+  letter-spacing: 0.4px;
+}
+body .container main .inner-main .right .inner-right .secondDiv .amount-container {
+  width: 40%;
+  height: 100px;
+}
+body .container main .inner-main .right .inner-right .secondDiv .amount-container .priceDiv {
+  display: flex;
+  width: 65%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container main .inner-main .right .inner-right .secondDiv .amount-container .priceDiv span {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+body .container main .inner-main .right .inner-right .secondDiv .amount-container .priceDiv p {
+  margin: 0;
+  height: 20px;
+  width: 35px;
+  padding: 5px;
+  text-align: center;
+  background-color: hsla(25, 81%, 85%, 0.664);
+  color: hsl(26, 88%, 53%);
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 5px;
+}
+body .container main .inner-main .right .inner-right .secondDiv .amount-container .discountDiv {
+  width: 10%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+body .container main .inner-main .right .inner-right .secondDiv .amount-container .discountDiv p {
+  font-size: 14px;
+  color: hsl(216, 9%, 67%);
+  letter-spacing: 0.5px;
+  text-decoration: line-through;
+}
+body .container main .inner-main .right .inner-right .lastDiv {
+  width: 90%;
+  height: 200px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+}
+body .container main .inner-main .right .inner-right .lastDiv .count-container {
+  width: 150px;
+  height: 50px;
+  background: hsla(219, 15%, 77%, 0.288);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+body .container main .inner-main .right .inner-right .lastDiv .count-container:active {
+  box-shadow: 0px 0px 20px rgba(70, 67, 67, 0.301);
+}
+body .container main .inner-main .right .inner-right .lastDiv .count-container .minus:active {
+  opacity: 0.5;
+}
+body .container main .inner-main .right .inner-right .lastDiv .count-container .plus:active {
+  opacity: 0.5;
+}
+body .container main .inner-main .right .inner-right .lastDiv .addToCartButton {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(26, 94%, 53%);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px 2px hsla(26, 100%, 55%, 0.616);
+  margin-left: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 0.5s ease;
+}
+body .container main .inner-main .right .inner-right .lastDiv .addToCartButton:active {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p {
+  margin-left: 20px;
+}
+
+@media (max-width: 560px) {
+  body .container {
+    width: 100%;
+  }
+  body .container header .inner-header-container {
+    justify-content: space-between;
+    height: 90%;
+  }
+  body .container header .inner-header-container .startDiv {
+    width: 255px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container header .inner-header-container .startDiv .humburgerContainer {
+    display: flex;
+    width: 50px;
+    height: 70px;
+    align-items: center;
+    margin-top: 10px;
+  }
+  body .container header .inner-header-container .startDiv .humburgerContainer img {
+    width: 27px;
+    height: 27px;
+  }
+  body .container header .inner-header-container .startDiv h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -2px;
+  }
+  body .container header .inner-header-container .middleDiv {
+    display: none;
+  }
+  body .container header .inner-header-container .endDiv {
+    width: 120px;
+    margin-left: 0px;
+  }
+  body .container header .inner-header-container .endDiv .billContainer {
+    z-index: 1;
+    width: 370px;
+    height: 310px;
+    top: 100px;
+    right: 65px;
+  }
+  body .container header .inner-header-container .endDiv .shoppingIcon .addToCartAmount {
+    left: 20px;
+  }
+  body .container main .inner-main {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+  body .container main .inner-main .left {
+    width: 100%;
+  }
+  body .container main .inner-main .left .inner-left {
+    width: 100%;
+    align-items: center;
+    position: relative;
+  }
+  body .container main .inner-main .left .inner-left .leftAndRightContainer {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 35%;
+  }
+  body .container main .inner-main .left .inner-left .leftAndRightContainer .leftArrowDiv, body .container main .inner-main .left .inner-left .leftAndRightContainer .rightArrowDiv {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  body .container main .inner-main .left .inner-left .leftAndRightContainer .leftArrowDiv:active, body .container main .inner-main .left .inner-left .leftAndRightContainer .rightArrowDiv:active {
+    transform: scale(1.2);
+    color: hsl(26, 100%, 55%);
+  }
+  body .container main .inner-main .left .inner-left .leftAndRightContainer .leftArrowDiv {
+    margin-left: 20px;
+  }
+  body .container main .inner-main .left .inner-left .leftAndRightContainer .leftArrowDiv .arrowLeft {
+    width: 20px;
+    height: 20px;
+  }
+  body .container main .inner-main .left .inner-left .leftAndRightContainer .rightArrowDiv {
+    margin-right: 20px;
+  }
+  body .container main .inner-main .left .inner-left .leftAndRightContainer .rightArrowDiv .arrowRight {
+    width: 20px;
+    height: 20px;
+  }
+  body .container main .inner-main .left .inner-left .bigImageContainer {
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    border-radius: unset;
+  }
+  body .container main .inner-main .left .inner-left .small-image-container {
+    display: none;
+    width: 100%;
+  }
+  body .container main .inner-main .right {
+    align-items: start;
+    width: 100%;
+  }
+  body .container main .inner-main .right .inner-right {
+    height: 90%;
+  }
+  body .container main .inner-main .right .inner-right .firstDiv p {
+    width: 100%;
+    font-size: 38px;
+  }
+  body .container main .inner-main .right .inner-right .secondDiv .recommend-text {
+    width: 90%;
+  }
+  body .container main .inner-main .right .inner-right .secondDiv .amount-container {
+    width: 80%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body .container main .inner-main .right .inner-right .secondDiv .amount-container .priceDiv {
+    width: 50%;
+    justify-content: unset;
+  }
+  body .container main .inner-main .right .inner-right .secondDiv .amount-container .priceDiv p {
+    margin-left: 30px;
+  }
+  body .container main .inner-main .right .inner-right .lastDiv {
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: flex-start;
+    align-items: center;
+    margin-left: 20px;
+    width: 90%;
+    height: 200px;
+  }
+  body .container main .inner-main .right .inner-right .lastDiv .count-container {
+    width: 100%;
+  }
+  body .container main .inner-main .right .inner-right .lastDiv .addToCartButton {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 420px) {
+  body .container header .inner-header-container .endDiv .billContainer {
+    right: 25px;
+  }
+}
+@media (max-width: 390px) {
+  body .container header .inner-header-container .endDiv .billContainer {
+    right: 15px;
+    width: 350px;
+    height: 250px;
+  }
+}/*# sourceMappingURL=style.css.map */
