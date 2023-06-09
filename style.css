@@ -771,14 +771,14 @@ body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p
     margin-left: 0px;
   }
   body .container header .inner-header-container .endDiv .billCard {
-    width: 500px;
+    width: 100vw;
     height: 330px;
     top: 100px;
     right: 0;
     z-index: 1;
   }
   body .container header .inner-header-container .endDiv .billCard .billContainer {
-    width: 90%;
+    width: 80%;
     height: 90%;
     top: 100px;
     right: 65px;
@@ -893,11 +893,14 @@ body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p
 }
 @media (max-width: 420px) {
   body .container header .inner-header-container .endDiv .billCard {
-    width: 400px;
+    width: 100vw;
   }
 }
 @media (max-width: 390px) {
   body .container header .inner-header-container .endDiv .billCard {
-    width: 360px;
+    width: 100vw;
+  }
+  body .container header .inner-header-container .endDiv .billCard .billContainer {
+    width: 95%;
   }
 }/*# sourceMappingURL=style.css.map */

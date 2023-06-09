@@ -284,7 +284,7 @@ body{
                     .shoppingIcon{
                         transition: all 0.4s ease;
 
-                        
+
 
                         &:active{
                             opacity: 0.5;
@@ -862,6 +862,7 @@ body{
                 transition: all 0.5s ease;
                 height: 120%;
 
+
                 .menuContainer{
 
                     width: 100%;
@@ -958,8 +959,9 @@ body{
                         width: 120px;
                         margin-left: 0px;
 
+
                         .billCard{
-                            width: 500px;
+                            width: 100vw;
                             height: 330px;
                             top: 100px;
                             right: 0;
@@ -967,7 +969,7 @@ body{
 
                             .billContainer{
                                 
-                                width: 90%;
+                                width: 80%;
                                 height: 90%;
                                 top: 100px;
                                 right: 65px;
@@ -1157,8 +1159,7 @@ body{
                     .endDiv{
 
                         .billCard{
-                            width: 400px;
-
+                            width: 100vw
 
                         }
                         
@@ -1180,7 +1181,11 @@ body{
                     .endDiv{
 
                         .billCard{
-                            width: 360px;
+                            width: 100vw;
+
+                            .billContainer{
+                                width: 95%;
+                            }
                         }
                     }
                 }
