@@ -6,7 +6,7 @@ body{
     align-items: center;
     margin: 0;
     padding: 0;
-
+    font-family: 'Kumbh Sans', sans-serif;
 
     &::-webkit-scrollbar{
         display: none;
@@ -17,10 +17,24 @@ body{
     .container{
         width: 80vw;
         height: 100vh;
-        
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+
+
+        .menuSlider{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 200%;
+            background-color: white;
+
+            
+        }
+
 
         header{
             width: 100%;
@@ -30,6 +44,8 @@ body{
             font-family: 'Kumbh Sans', sans-serif;
             cursor: pointer;
             user-select: none;
+
+            
 
             .inner-header-container{
                 width: 100%;
@@ -112,151 +128,167 @@ body{
                     margin-left: 500px;
                     position: relative;
 
-                    .billContainer{
-                        width: 340px;
-                        height: 240px;
+                    .billCard{
+                        width: 500px;
+                        height: 300px;
                         display: flex;
-                        flex-direction: column;
-                        
-                        background-color: white;
+                        justify-content: center;
+                        align-items: center;
                         position: absolute;
-                        top: 75px;
-                        right: 1px;
-                        border: none;
                         transform: scale(0);
-                        border-radius: 8px;
                         transition: all 0.5s ease;
-                        box-shadow: 0px 14px 30px  hsla(240, 1%, 17%, 0.329);
+                        top: 55px;
 
 
-                        .firstDivInBill{
-                            width: 95%;
-                            height: 60px;
-                            border-bottom: 0.5px solid hsla(220, 14%, 75%, 0.562);
+                        .billContainer{
+                            width: 80%;
+                            height: 80%;
                             display: flex;
-                            align-items: center;
-                            padding-left: 20px;
-                        }
-
-                        .secondDivInBill{
-
-                            width: 100%;
-                            height: calc(100% - 60px);
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            color: hsl(219, 7%, 61%);
-                            font-weight: 700;
+                            flex-direction: column;                       
+                            background-color: white;
+                            right: 1px;
+                            border: none;
                             
-                            .inCartItemContainer{
-                                width: 90%;
-                                height: 80%;
+                            border-radius: 8px;
+                            
+                            box-shadow: 0px 14px 30px  hsla(240, 1%, 17%, 0.329);
+    
+    
+                            .firstDivInBill{
+                                width: 95%;
+                                height: 60px;
+                                border-bottom: 0.5px solid hsla(220, 14%, 75%, 0.562);
                                 display: flex;
-                                flex-direction: column;
+                                align-items: center;
+                                padding-left: 20px;
+                            }
+    
+                            .secondDivInBill{
+    
+                                width: 100%;
+                                height: calc(100% - 60px);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: hsl(219, 7%, 61%);
+                                font-weight: 700;
                                 
-                                .checkoutButton{
-
-                                    transition: all 0.5s ease;
-                                
-                                &:active{
-                                    opacity: 0.7;
-                                    transform: scale(1.1);
-                                }
-                                }
-
-                                .itemAndAmountContainer{
-                                    width: 100%;
-                                    height:calc(100% - 50px);
-                                    transform: scale(0);
+                                .inCartItemContainer{
+                                    width: 90%;
+                                    height: 80%;
                                     display: flex;
-                                    transition: all 0.5s ease;
-                                    justify-content: center;
-
-                                    .billImageContainer{
-                                        width: 50px;
-                                        height: 50px;
-                                        border-radius: 8px;
-
-                                        img{
-                                            width: 100%;
-                                            height: 100%;
-                                            border-radius: inherit;
-                                        }
+                                    flex-direction: column;
+                                    
+                                    .checkoutButton{
+    
+                                        transition: all 0.5s ease;
+                                    
+                                    &:active{
+                                        opacity: 0.7;
+                                        transform: scale(1.1);
                                     }
-
-                                    .billText{
+                                    }
+    
+                                    .itemAndAmountContainer{
+                                        width: 100%;
+                                        height:calc(100% - 50px);
+                                        transform: scale(0);
                                         display: flex;
-                                        flex-direction: column;
-                                        width: 250px;
-                                        height: 60px;
-                                        font-family: 'Kumbh Sans', sans-serif;
+                                        transition: all 0.5s ease;
                                         justify-content: center;
-                                        padding-left: 20px;
-
-
-                                        .shoesEditionText{
-                                            margin: 0;
-                                            font-weight: 500;
-                                            color: hsla(216, 5%, 39%, 0.774);
-                                            font-size: 15px;
+    
+                                        .billImageContainer{
+                                            width: 50px;
+                                            height: 50px;
+                                            border-radius: 8px;
+    
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                                border-radius: inherit;
+                                            }
                                         }
-
-
-                                        .bottomDivOfBillText{
+    
+                                        .billText{
                                             display: flex;
-                                            width: 200px;
-                                            height: 30px;
-
-                                            .text1InBill{
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
+                                            flex-direction: column;
+                                            width: 250px;
+                                            height: 60px;
+                                            font-family: 'Kumbh Sans', sans-serif;
+                                            justify-content: center;
+                                            padding-left: 20px;
+    
+    
+                                            .shoesEditionText{
+                                                margin: 0;
                                                 font-weight: 500;
                                                 color: hsla(216, 5%, 39%, 0.774);
                                                 font-size: 15px;
-
                                             }
-
-                                            .text2InBill{
+    
+    
+                                            .bottomDivOfBillText{
                                                 display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                font-weight: 800;
-                                                color: hsla(240, 4%, 5%, 0.973);
-                                                letter-spacing: 0.5px;
-                                                font-size: 15px;
+                                                width: 200px;
+                                                height: 30px;
+    
+                                                .text1InBill{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    font-weight: 500;
+                                                    color: hsla(216, 5%, 39%, 0.774);
+                                                    font-size: 15px;
+    
+                                                }
+    
+                                                .text2InBill{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    font-weight: 800;
+                                                    color: hsla(240, 4%, 5%, 0.973);
+                                                    letter-spacing: 0.5px;
+                                                    font-size: 15px;
+                                                }
                                             }
+                                            
                                         }
-                                        
+    
+                                        .deleteIconContainer{
+                                            height: 55%;
+                                            display: flex;
+                                            align-items: center;
+                                        }
+    
+    
+    
+    
                                     }
-
-                                    .deleteIconContainer{
-                                        height: 55%;
-                                        display: flex;
-                                        align-items: center;
+    
+                                    button{
+                                        height: 50px;
+                                        border-radius: 10px;
+                                        border: none;
+                                        background-color: hsl(26, 100%, 55%);
+                                        color: white;
+                                        font-size: 15px;
+                                        letter-spacing: 0.5px;
+                                        font-weight: 700;
                                     }
-
-
-
-
-                                }
-
-                                button{
-                                    height: 50px;
-                                    border-radius: 10px;
-                                    border: none;
-                                    background-color: hsl(26, 100%, 55%);
-                                    color: white;
-                                    font-size: 15px;
-                                    letter-spacing: 0.5px;
-                                    font-weight: 700;
                                 }
                             }
                         }
                     }
 
                     .shoppingIcon{
+                        transition: all 0.4s ease;
+
                         
+
+                        &:active{
+                            opacity: 0.5;
+                        }
 
                         img{
                             width: 28px;
@@ -823,6 +855,59 @@ body{
             width: 100%;
 
 
+            .menuSlider{
+                display: flex;
+                z-index: 4; 
+                transform: translateX(-300px);
+                transition: all 0.5s ease;
+                height: 120%;
+
+                .menuContainer{
+
+                    width: 100%;
+                    height: 50%;
+                    
+                    display: flex;
+                    flex-direction: column;
+
+
+
+                    .crossInMenu{
+                        width: 100%;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        
+
+
+                        .crossIconInMenu{
+                            font-size: 35px; 
+                            color: hsl(220, 7%, 60%);
+                            margin-left: 20px;
+
+                            &:active{
+                                color: hsl(26, 100%, 55%);
+
+                            }
+                        }
+                    }
+
+                    .menuListContainer{
+                        padding: 0;
+                        margin-top: 30px;
+
+                        li{
+                            margin-left: 20px;
+                            height: 50px;
+                            list-style-type: none;
+                            font-weight: 700;
+                            font-size: 17px;
+                        }
+                    }
+
+                }
+            }
+
             header{
 
 
@@ -836,16 +921,23 @@ body{
                         align-items: center;
                         justify-content: center;
 
-                        .humburgerContainer{
+                        .humburgerContainer{                        
                             display: flex;
                             width: 50px;
                             height: 70px;
                             align-items: center;
                             margin-top: 10px;
-
+                            
+                            
                             img{
                                 width: 27px;
                                 height: 27px;
+                                transition: transform 0.5s ease;
+
+                                &:active{
+                                    transform: scale(1.1);
+                                }
+
                             }
                             
                         }
@@ -866,12 +958,20 @@ body{
                         width: 120px;
                         margin-left: 0px;
 
-                        .billContainer{
-                            z-index: 1;
-                            width: 370px;
-                            height: 310px;
+                        .billCard{
+                            width: 500px;
+                            height: 330px;
                             top: 100px;
-                            right: 65px;
+                            right: 0;
+                            z-index: 1;
+
+                            .billContainer{
+                                
+                                width: 90%;
+                                height: 90%;
+                                top: 100px;
+                                right: 65px;
+                            }
                         }
 
                         .shoppingIcon{
@@ -1055,9 +1155,13 @@ body{
                 .inner-header-container{
 
                     .endDiv{
-                        .billContainer{
-                            right: 25px;
+
+                        .billCard{
+                            width: 400px;
+
+
                         }
+                        
                     }
                 }
             }
@@ -1075,10 +1179,8 @@ body{
 
                     .endDiv{
 
-                        .billContainer{
-                            right: 15px;
-                            width: 350px;
-                            height: 250px;
+                        .billCard{
+                            width: 360px;
                         }
                     }
                 }

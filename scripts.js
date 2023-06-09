@@ -369,6 +369,7 @@ minusSign.addEventListener("click",()=>{
 
 //shopping cart icon click
 const shoppingCartIcon = document.querySelector(".shoppingIcon")
+const billCard = document.querySelector(".billCard")
 const billContainer = document.querySelector(".billContainer")
 const secondDivInbill = document.querySelector(".secondDivInBill")
 const billCartItemContainer = document.querySelector(".inCartItemContainer")
@@ -385,13 +386,13 @@ const body = document.querySelector("body")
 
 
 shoppingCartIcon.addEventListener("click",()=>{
-    if(billContainer.classList.contains("active")){
+    if(billCard.classList.contains("active")){
 
-        billContainer.style.transform  = "scale(0)"
-        billContainer.classList.remove("active")
+        billCard.style.transform  = "scale(0)"
+        billCard.classList.remove("active")
     }else{
-        billContainer.style.transform  = "scale(1)"
-        billContainer.classList.add("active")
+        billCard.style.transform  = "scale(1)"
+        billCard.classList.add("active")
     }
 
     if(countNumberDiv.innerHTML == 0){
@@ -433,9 +434,26 @@ avatarIcon.addEventListener("click",()=>{
 addToCartButton.addEventListener("click",()=>{
     addToCartText.style.opacity = "1"
     addToCartText.innerText = countNumberDiv.innerText
+   
 
 })
 
+
+//cross icon in menu slider 
+const crossIconInMenu = document.querySelector(".crossIconInMenu")
+const menuSlider = document.querySelector(".menuSlider")
+
+crossIconInMenu.addEventListener("click",()=>{
+    
+    menuSlider.style.transform = "translateX(-350px)"
+})
+
+//heumberger menu clicking
+const humburgerIcon = document.querySelector(".humburger")
+
+humburgerIcon.addEventListener("click",()=>{
+    menuSlider.style.transform = "translateX(0px)"
+})
 
 //this loop for header middle div container
 

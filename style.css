@@ -6,6 +6,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -16,6 +17,16 @@ body .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+body .container .menuSlider {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200%;
+  background-color: white;
 }
 body .container header {
   width: 100%;
@@ -90,22 +101,29 @@ body .container header .inner-header-container .endDiv {
   margin-left: 500px;
   position: relative;
 }
-body .container header .inner-header-container .endDiv .billContainer {
-  width: 340px;
-  height: 240px;
+body .container header .inner-header-container .endDiv .billCard {
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  top: 55px;
+}
+body .container header .inner-header-container .endDiv .billCard .billContainer {
+  width: 80%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   background-color: white;
-  position: absolute;
-  top: 75px;
   right: 1px;
   border: none;
-  transform: scale(0);
   border-radius: 8px;
-  transition: all 0.5s ease;
   box-shadow: 0px 14px 30px hsla(240, 1%, 17%, 0.329);
 }
-body .container header .inner-header-container .endDiv .billContainer .firstDivInBill {
+body .container header .inner-header-container .endDiv .billCard .billContainer .firstDivInBill {
   width: 95%;
   height: 60px;
   border-bottom: 0.5px solid hsla(220, 14%, 75%, 0.562);
@@ -113,7 +131,7 @@ body .container header .inner-header-container .endDiv .billContainer .firstDivI
   align-items: center;
   padding-left: 20px;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill {
   width: 100%;
   height: calc(100% - 60px);
   display: flex;
@@ -122,20 +140,20 @@ body .container header .inner-header-container .endDiv .billContainer .secondDiv
   color: hsl(219, 7%, 61%);
   font-weight: 700;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer {
   width: 90%;
   height: 80%;
   display: flex;
   flex-direction: column;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .checkoutButton {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .checkoutButton {
   transition: all 0.5s ease;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .checkoutButton:active {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .checkoutButton:active {
   opacity: 0.7;
   transform: scale(1.1);
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer {
   width: 100%;
   height: calc(100% - 50px);
   transform: scale(0);
@@ -143,17 +161,17 @@ body .container header .inner-header-container .endDiv .billContainer .secondDiv
   transition: all 0.5s ease;
   justify-content: center;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billImageContainer {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billImageContainer {
   width: 50px;
   height: 50px;
   border-radius: 8px;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billImageContainer img {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billImageContainer img {
   width: 100%;
   height: 100%;
   border-radius: inherit;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText {
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -162,18 +180,18 @@ body .container header .inner-header-container .endDiv .billContainer .secondDiv
   justify-content: center;
   padding-left: 20px;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .shoesEditionText {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .shoesEditionText {
   margin: 0;
   font-weight: 500;
   color: hsla(216, 5%, 39%, 0.774);
   font-size: 15px;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText {
   display: flex;
   width: 200px;
   height: 30px;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText .text1InBill {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText .text1InBill {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +199,7 @@ body .container header .inner-header-container .endDiv .billContainer .secondDiv
   color: hsla(216, 5%, 39%, 0.774);
   font-size: 15px;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText .text2InBill {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .billText .bottomDivOfBillText .text2InBill {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,12 +208,12 @@ body .container header .inner-header-container .endDiv .billContainer .secondDiv
   letter-spacing: 0.5px;
   font-size: 15px;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .deleteIconContainer {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer .itemAndAmountContainer .deleteIconContainer {
   height: 55%;
   display: flex;
   align-items: center;
 }
-body .container header .inner-header-container .endDiv .billContainer .secondDivInBill .inCartItemContainer button {
+body .container header .inner-header-container .endDiv .billCard .billContainer .secondDivInBill .inCartItemContainer button {
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -204,6 +222,12 @@ body .container header .inner-header-container .endDiv .billContainer .secondDiv
   font-size: 15px;
   letter-spacing: 0.5px;
   font-weight: 700;
+}
+body .container header .inner-header-container .endDiv .shoppingIcon {
+  transition: all 0.4s ease;
+}
+body .container header .inner-header-container .endDiv .shoppingIcon:active {
+  opacity: 0.5;
 }
 body .container header .inner-header-container .endDiv .shoppingIcon img {
   width: 28px;
@@ -671,6 +695,44 @@ body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p
   body .container {
     width: 100%;
   }
+  body .container .menuSlider {
+    display: flex;
+    z-index: 4;
+    transform: translateX(-300px);
+    transition: all 0.5s ease;
+    height: 120%;
+  }
+  body .container .menuSlider .menuContainer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  body .container .menuSlider .menuContainer .crossInMenu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  body .container .menuSlider .menuContainer .crossInMenu .crossIconInMenu {
+    font-size: 35px;
+    color: hsl(220, 7%, 60%);
+    margin-left: 20px;
+  }
+  body .container .menuSlider .menuContainer .crossInMenu .crossIconInMenu:active {
+    color: hsl(26, 100%, 55%);
+  }
+  body .container .menuSlider .menuContainer .menuListContainer {
+    padding: 0;
+    margin-top: 30px;
+  }
+  body .container .menuSlider .menuContainer .menuListContainer li {
+    margin-left: 20px;
+    height: 50px;
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 17px;
+  }
   body .container header .inner-header-container {
     justify-content: space-between;
     height: 90%;
@@ -691,6 +753,10 @@ body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p
   body .container header .inner-header-container .startDiv .humburgerContainer img {
     width: 27px;
     height: 27px;
+    transition: transform 0.5s ease;
+  }
+  body .container header .inner-header-container .startDiv .humburgerContainer img:active {
+    transform: scale(1.1);
   }
   body .container header .inner-header-container .startDiv h1 {
     font-size: 38px;
@@ -704,10 +770,16 @@ body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p
     width: 120px;
     margin-left: 0px;
   }
-  body .container header .inner-header-container .endDiv .billContainer {
+  body .container header .inner-header-container .endDiv .billCard {
+    width: 500px;
+    height: 330px;
+    top: 100px;
+    right: 0;
     z-index: 1;
-    width: 370px;
-    height: 310px;
+  }
+  body .container header .inner-header-container .endDiv .billCard .billContainer {
+    width: 90%;
+    height: 90%;
     top: 100px;
     right: 65px;
   }
@@ -820,14 +892,12 @@ body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p
   }
 }
 @media (max-width: 420px) {
-  body .container header .inner-header-container .endDiv .billContainer {
-    right: 25px;
+  body .container header .inner-header-container .endDiv .billCard {
+    width: 400px;
   }
 }
 @media (max-width: 390px) {
-  body .container header .inner-header-container .endDiv .billContainer {
-    right: 15px;
-    width: 350px;
-    height: 250px;
+  body .container header .inner-header-container .endDiv .billCard {
+    width: 360px;
   }
 }/*# sourceMappingURL=style.css.map */
