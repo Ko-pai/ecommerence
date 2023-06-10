@@ -383,6 +383,10 @@ const checkoutButton = document.querySelector(".checkoutButton")
 const body = document.querySelector("body")
 
 
+const addToCartButton = document.querySelector(".addToCartButton")
+const addToCartText = document.querySelector(".addToCartAmount")
+const avatarIcon = document.querySelector(".avatarIcon")
+
 
 
 shoppingCartIcon.addEventListener("click",()=>{
@@ -395,13 +399,13 @@ shoppingCartIcon.addEventListener("click",()=>{
         billCard.classList.add("active")
     }
 
-    if(countNumberDiv.innerHTML == 0){
+    if(addToCartText.innerHTML == 0){
         billCartItemContainer.style.display = "none"
         emptyText.style.display = "flex"
     }else{
         emptyText.style.display = "none"
         billCartItemContainer.style.display = "flex"
-        quantityOfShoes.innerHTML = countNumberDiv.innerHTML
+        quantityOfShoes.innerHTML = addToCartText.innerHTML
         multiplyOfAmountAndQuantity.innerHTML = Number(quantityOfShoes.innerHTML) * Number(amountOfShoes.innerHTML)
         itemAndAmount.style.transform = "scale(1)"
     }
@@ -413,17 +417,12 @@ checkoutButton.addEventListener("click",()=>{
 })
 
 
-//delete icon clicking method 
-deleteIcon.addEventListener("click", ()=>{
-    itemAndAmount.style.transform = "scale(0)"
-})
+
+
 
 //for add to cart button click
 
-const addToCartButton = document.querySelector(".addToCartButton")
-const addToCartText = document.querySelector(".addToCartAmount")
 
-const avatarIcon = document.querySelector(".avatarIcon")
 
 avatarIcon.addEventListener("click",()=>{
     if(avatarIcon.classList.contains("borderColor")){
@@ -436,10 +435,20 @@ avatarIcon.addEventListener("click",()=>{
 addToCartButton.addEventListener("click",()=>{
     addToCartText.style.opacity = "1"
     addToCartText.innerText = countNumberDiv.innerText
-   
+    count = 0 
+    countNumberDiv.innerText = count
 
 })
 
+//delete icon clicking method 
+deleteIcon.addEventListener("click", ()=>{
+    itemAndAmount.style.transform = "scale(0)"
+    addToCartText.innerText = 0
+    
+    setTimeout(()=>{
+        billCard.style.transform = "scale(0)"
+    },1200)
+})
 
 //cross icon in menu slider 
 const crossIconInMenu = document.querySelector(".crossIconInMenu")
