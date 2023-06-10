@@ -363,7 +363,7 @@ body{
                         height: 100vh;
                         background: hsla(0, 0%, 0%,75%);
                         top: 0;
-                        left: 0;
+                        left: -160px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -1000,7 +1000,10 @@ body{
 
                         .left{
                             width: 100%;
-    
+                            
+                            .lightBox{
+                                display: none;
+                            }
                             
                             .inner-left{
                                 width: 100%;

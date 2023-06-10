@@ -92,8 +92,8 @@ imageArray.map((data)=>{
             removeActiveStyle4()
 
             ActiveStyle2()
-           bigImage.src = "/images/image-product-2.jpg"
-           bigImageInLightBox.src = "/images/image-product-2.jpg"
+           bigImage.src = "./images/image-product-2.jpg"
+           bigImageInLightBox.src = "./images/image-product-2.jpg"
            //product2SmallImageInLightBox.firstChild.classList.remove("imgActive")
 
           
@@ -114,8 +114,8 @@ imageArray.map((data)=>{
 
             ActiveStyle1()
            
-           bigImage.src = "/images/image-product-1.jpg"
-           bigImageInLightBox.src = "/images/image-product-1.jpg"
+           bigImage.src = "./images/image-product-1.jpg"
+           bigImageInLightBox.src = "./images/image-product-1.jpg"
            /*
            product2SmallImageInLightBox.classList.add("active")
            product2SmallImageInLightBox.firstChild.classList.add("imgActive")
@@ -136,8 +136,8 @@ imageArray.map((data)=>{
             removeActiveStyle4()
             ActiveStyle3()
            
-           bigImage.src = "/images/image-product-3.jpg"
-           bigImageInLightBox.src = "/images/image-product-3.jpg"
+           bigImage.src = "./images/image-product-3.jpg"
+           bigImageInLightBox.src = "./images/image-product-3.jpg"
            
        }else{
            
@@ -154,8 +154,8 @@ imageArray.map((data)=>{
 
             ActiveStyle4()
 
-           bigImage.src = "/images/image-product-4.jpg"
-           bigImageInLightBox.src = "/images/image-product-4.jpg"
+           bigImage.src = "./images/image-product-4.jpg"
+           bigImageInLightBox.src = "./images/image-product-4.jpg"
        }
    })    
 
@@ -179,8 +179,8 @@ imageArray.map((data)=>{
             removeActiveStyleInMainPageSmallImage1()
             removeActiveStyleInMainPageSmallImage4()
             removeActiveStyleInMainPageSmallImage3()
-            bigImage.src = "/images/image-product-2.jpg"
-            bigImageInLightBox.src = "/images/image-product-2.jpg"
+            bigImage.src = "./images/image-product-2.jpg"
+            bigImageInLightBox.src = "./images/image-product-2.jpg"
             //product2SmallImageInLightBox.firstChild.classList.remove("imgActive")
 
            
@@ -197,8 +197,8 @@ imageArray.map((data)=>{
             removeActiveStyleInMainPageSmallImage4()
             removeActiveStyleInMainPageSmallImage2()
             removeActiveStyleInMainPageSmallImage3()
-            bigImage.src = "/images/image-product-1.jpg"
-            bigImageInLightBox.src = "/images/image-product-1.jpg"
+            bigImage.src = "./images/image-product-1.jpg"
+            bigImageInLightBox.src = "./images/image-product-1.jpg"
             /*
             product2SmallImageInLightBox.classList.add("active")
             product2SmallImageInLightBox.firstChild.classList.add("imgActive")
@@ -218,8 +218,8 @@ imageArray.map((data)=>{
             removeActiveStyleInMainPageSmallImage1()
             removeActiveStyleInMainPageSmallImage2()
             removeActiveStyleInMainPageSmallImage4()
-            bigImage.src = "/images/image-product-3.jpg"
-            bigImageInLightBox.src = "/images/image-product-3.jpg"
+            bigImage.src = "./images/image-product-3.jpg"
+            bigImageInLightBox.src = "./images/image-product-3.jpg"
             
         }else{
             createList.classList.add("active")
@@ -235,8 +235,8 @@ imageArray.map((data)=>{
             removeActiveStyleInMainPageSmallImage2()
             removeActiveStyleInMainPageSmallImage3()
 
-            bigImage.src = "/images/image-product-4.jpg"
-            bigImageInLightBox.src = "/images/image-product-4.jpg"
+            bigImage.src = "./images/image-product-4.jpg"
+            bigImageInLightBox.src = "./images/image-product-4.jpg"
         }
     })
 
@@ -257,7 +257,7 @@ for(let i = 0 ; i < imageArray.length ; i++){
             removeActiveStyle4()
             ActiveStyle1()
             bigImageInLightBox.src = imageArray[0].image
-            
+           
 
         }else if(left == 2){
             removeActiveStyle1()
@@ -411,6 +411,8 @@ shoppingCartIcon.addEventListener("click",()=>{
 checkoutButton.addEventListener("click",()=>{
     window.alert("We will sent your order in two days. Thank for buy from me!")
 })
+
+
 //delete icon clicking method 
 deleteIcon.addEventListener("click", ()=>{
     itemAndAmount.style.transform = "scale(0)"

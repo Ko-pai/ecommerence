@@ -287,7 +287,7 @@ body .container main .inner-main .left .lightBox {
   height: 100vh;
   background: hsla(0, 0%, 0%, 0.75);
   top: 0;
-  left: 0;
+  left: -160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -793,6 +793,9 @@ body .container main .inner-main .right .inner-right .lastDiv .addToCartButton p
   }
   body .container main .inner-main .left {
     width: 100%;
+  }
+  body .container main .inner-main .left .lightBox {
+    display: none;
   }
   body .container main .inner-main .left .inner-left {
     width: 100%;
