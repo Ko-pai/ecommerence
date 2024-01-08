@@ -413,7 +413,7 @@ shoppingCartIcon.addEventListener("click",()=>{
 
 
 checkoutButton.addEventListener("click",()=>{
-    window.alert("We will sent your order in two days. Thank for buy from me!")
+    window.alert("We will send your order in two days. Thank you")
 })
 
 
