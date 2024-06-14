@@ -47,6 +47,7 @@ body .container header .inner-header-container {
   height: 100%;
   display: flex;
   align-items: start;
+  justify-content : center;
 }
 body .container header .inner-header-container .startDiv {
   display: flex;
@@ -101,7 +102,6 @@ body .container header .inner-header-container .endDiv {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-left: 500px;
   position: relative;
 }
 body .container header .inner-header-container .endDiv .billCard {
@@ -249,7 +249,7 @@ body .container header .inner-header-container .endDiv .shoppingIcon .addToCartA
   font-size: 12px;
   position: absolute;
   top: 23px;
-  left: 45px;
+  left: 50px;
   font-weight: 700;
   opacity: 0;
   transition: all 0.5s ease;
